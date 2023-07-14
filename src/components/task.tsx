@@ -50,7 +50,7 @@ export const Task: React.FC<TaskProps> = ({ id, task, isDone }) => {
             <td onClick={handleDone}>
                 <input type="checkbox" className="checkbox" checked={done} onChange={handleDone}/>
             </td>
-            <td className="w-full break-words max-w-[146px]" onClick={handleDone}>
+            <td className={`w-full break-words max-w-[146px] ${done && 'line-through'}`} onClick={handleDone}>
                 {task}
             </td>
             <td className='flex items-center gap-5'>
